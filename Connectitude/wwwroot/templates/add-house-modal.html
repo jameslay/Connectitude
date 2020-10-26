@@ -1,0 +1,25 @@
+﻿
+<div class="modal" tabindex="-1" role="dialog" id="addHouseModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add house</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="resetHouse()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Name</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="e.g. James" ng-class="{'error' : incorrectHouse ? true : false}" ng-model="newHouse">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-disabled="incorrectHouse" ng-click="saveHouse(newHouse)" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="resetHouse()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

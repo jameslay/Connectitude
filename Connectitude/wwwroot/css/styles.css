@@ -1,0 +1,143 @@
+body {
+    text-align: center;
+    background-color: #011F3F;
+    color: white;
+    margin: 0px;
+}
+
+.btn {
+    border-radius: 20px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 25px;
+    background-color: #4eb5f1;
+}
+
+.btn:hover {
+    background-color: #4095c6;
+}
+
+#title {
+    font-family: cursive;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+/** Sidebar **/
+.sideNav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    background-color: rgb(184, 184, 184);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.infoRow {
+    text-align: left;
+    font-size : 15px;
+}
+#searchBtn {
+    width: 40%;
+    color: white;
+}
+
+#clearBtn {
+    width: 40%;
+    color: white;
+}
+
+#nameInput {
+    width: 80%;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+}
+
+.sideBtn {
+    padding-bottom: 10px;
+}
+
+.sideBtn > button {
+    width: 80%;
+}
+
+.allHouses {
+    margin: 5px;
+    border-width: 5px;
+    border-color: grey;
+    border-style: solid;
+}
+
+.houseInfo {
+    margin : 10px 0 10px 0;
+}
+.houseParagraph {
+    background-color: grey;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.btn-delete {
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    background-color: #4eb5f1;
+    width: 100%;
+    border-color: #4eb5f1;
+    padding : 0;
+}
+/** Body **/
+.main {
+    margin-left: 250px;
+}
+
+/** Card **/
+.cardRow {
+    margin: 0;
+}
+
+.room {
+    width: 15rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0;
+}
+
+.card-title {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card-body {
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card-delete {
+    border: 0;
+    padding: 5px 0 5px 0;
+    color: white;
+    font-size: 20px;
+    background-color: #4eb5f1;
+}
+
+/** Modal **/
+.modal {
+    color: black;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+
+    <title>Connectitude - James Lay</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body ng-app="automateHome" ng-controller="automateCtrl">
+
+    <div class="sideNav">
+        <div class="sideBtn">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoModal" data-backdrop="static" data-keyboard="false">
+                Instructions
+            </button>
+        </div>
+        <div class="sideBtn">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addHouseModal" data-backdrop="static" data-keyboard="false">
+                Add house
+            </button>
+        </div>
+        <div class="sideBtn">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addRoomModal" data-backdrop="static" data-keyboard="false">
+                Add room
+            </button>
+        </div>
+
+        <div class="sideBtn">
+            <button id="searchBtn" class="btn" ng-click="startAutomation()">Search</button>
+            <button id="clearBtn" class="btn" ng-click="clearAll()">Clear</button>
+        </div>
+        <input id="nameInput" type="text" ng-model="houseId" numeric-only maxlength="5">
+
+        <div class="allHouses">
+            <div>
+                <h2>Houses</h2>
+            </div>
+            <div ng-repeat="house in houses">
+                <div class="houseInfo">
+                    <div>
+                        <p class="houseParagraph">{{house.name}} ({{house.id}})</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn-delete" ng-click="deleteHouse(house.id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1 id="title" ng-bind="title"></h1>
+        <div instructions-modal></div>
+        <div add-house-modal></div>
+        <div add-room-modal></div>
+
+        <div class="row w-100 cardRow">
+            <div ng-repeat="room in rooms">
+                <div class="card room">
+                    <div class="card-body">
+                        <h2 class="card-title">{{room.homeName}}</h2>
+                        <p>Room : {{room.name}}</p>
+                        <p>Temperature : {{room.temperature}}</p>
+                        <p>Humidity : {{room.humidity}}</p>
+                    </div>
+
+                    <button type="button" class="card-delete" ng-click="deleteRoom(room.id)">Delete</button>
+                </div>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>
